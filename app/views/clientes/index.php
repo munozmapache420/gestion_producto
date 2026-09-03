@@ -5,8 +5,9 @@
 <table>
     <tr>
         <th>Nombre</th>
-        <th>Precio</th>
-        <th>Categoría</th>
+        <th>documento</th>
+        <th>Correo</th>
+        <th>telefono</th>
     </tr>
 
     <?php foreach ($clientes as $cliente): ?>
