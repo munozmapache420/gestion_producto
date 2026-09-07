@@ -10,7 +10,7 @@ $productoController->index();
 $clienteController = new ClienteController();
 $clienteController->index();
 
-$controller = new proveedoresController();
+$controller = new ProveedoresController();
 $controller->index();
 
 ?>

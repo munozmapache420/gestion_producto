@@ -15,10 +15,10 @@ class ModelProveedores
 public function listar()
 {
     $sql = "SELECT * FROM proveedores";
-    $stmt = $this->conexion->prepare($sql);
+    $stmt = $this->conexion->query($sql);
     $stmt->execute(); 
     
-    return $stmt->fetchAll();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
 }

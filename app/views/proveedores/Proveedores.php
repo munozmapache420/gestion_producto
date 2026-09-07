@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Proveedores</title>
-</head>
-
 <body>
-
-    <h1>Lista de Proveedores</h1>
-
-    <table border="1">
+    <table border="2">
+           <h1 style="color: cyan;">VISTA DE LISTADO DE PROVEEDORES</h1>
 
         <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Cuidad</th>
-            <th>Dirección</th>
+            <th style="color:red;">id</th>
+            <th style="color:red;">Nombre</th>
+            <th style="color:red;">Cuidad</th>
+            <th style="color:red;">Dirección</th>
         </tr>
 
         <?php foreach ($proveedores as $proveedor): ?>
