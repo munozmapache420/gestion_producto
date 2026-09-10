@@ -12,3 +12,7 @@ se crea en la misma estructura MVC junto en la misma base de datos sse crea una 
 ## 07/09/2026
 ## se realiza el apartadod e proveedores
 se crea en la misma estructura y clases el modelo de proveedores
+
+## consulta de id producto
+## 10/09/2026
+se crea una cinsulta con el id del producto y el del proveedor

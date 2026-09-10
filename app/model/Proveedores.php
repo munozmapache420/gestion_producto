@@ -14,7 +14,9 @@ class ModelProveedores
 
 public function listar()
 {
-    $sql = "SELECT * FROM proveedores";
+    $sql = "SELECT * FROM proveedores"
+    
+    ;
     $stmt = $this->conexion->query($sql);
     $stmt->execute(); 
     
