@@ -10,8 +10,9 @@ class productoController
 
         $productos = $producto->getAll();
 
-        $productoConsultado = $producto->getByid(5);
+        $productoConsultado = $producto->getById(5);
 
         require_once __DIR__ . '/../views/producto/index.php';
     }
 }
+?>

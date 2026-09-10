@@ -16,3 +16,8 @@ se crea en la misma estructura y clases el modelo de proveedores
 ## consulta de id producto
 ## 10/09/2026
 se crea una cinsulta con el id del producto y el del proveedor
+
+## se crea la interfaz de categoria junto a su id_categoria
+## 10/09/2026
+se creo junto a sus atributos y su vista mas una conexion foranea con id_categoria en producto
+

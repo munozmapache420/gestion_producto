@@ -1,3 +1,4 @@
+
 <?php
 
 class Producto
@@ -18,35 +19,42 @@ class Producto
         );
     }
 
-    public function getAll()
-    {
-        $sql = "SELECT
-                    p.id,
-                    p.nombre,
-                    p.valor,
-                    p.categoria,
-                    p.id_proveedor,
-                    pr.nombre AS proveedor
-                FROM productos p
-                INNER JOIN proveedores pr
-                    ON p.id_proveedor = pr.id";
-
-        $consulta = $this->connection->query($sql);
-
-        return $consulta->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-public function getByid($id)
+public function getAll()
 {
     $sql = "SELECT
                 p.id,
                 p.nombre,
                 p.valor,
-                p.categoria,
+                p.id_categoria,
+                c.nombre AS categoria,
+                c.descripcion AS descripcion_categoria,
                 p.id_proveedor,
                 pr.nombre AS proveedor
             FROM productos p
+            INNER JOIN categoria c
+                ON p.id_categoria = c.id_categoria
+            INNER JOIN proveedores pr
+                ON p.id_proveedor = pr.id";
+
+    $consulta = $this->connection->query($sql);
+
+    return $consulta->fetchAll(PDO::FETCH_ASSOC);
+}
+
+public function getById($id)
+{
+    $sql = "SELECT
+                p.id,
+                p.nombre,
+                p.valor,
+                p.id_categoria,
+                c.nombre AS categoria,
+                c.descripcion AS descripcion_categoria,
+                p.id_proveedor,
+                pr.nombre AS proveedor
+            FROM productos p
+            INNER JOIN categoria c
+                ON p.id_categoria = c.id_categoria
             INNER JOIN proveedores pr
                 ON p.id_proveedor = pr.id
             WHERE p.id = $id";
