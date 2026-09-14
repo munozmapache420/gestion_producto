@@ -14,7 +14,7 @@
     <th style="color:red;">Descripción Categoría</th>
 </tr>
 
-<?php foreach ($productos as $producto): ?>
+<?php foreach ($producto as $producto): ?>
 
     <tr>
         <td><?= $producto['id'] ?></td>
@@ -44,7 +44,7 @@
     <th style="color:red;">Descripción Categoría</th>
 </tr>
 
-<?php foreach ($productos as $productoConsultado): ?>
+<?php foreach ($producto as $productoConsultado): ?>
 
     <tr>
         <td><?= $productoConsultado['id'] ?></td>
