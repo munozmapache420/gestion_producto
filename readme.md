@@ -21,3 +21,6 @@ se crea una cinsulta con el id del producto y el del proveedor
 ## 10/09/2026
 se creo junto a sus atributos y su vista mas una conexion foranea con id_categoria en producto
 
+## se creo consultas de producto
+## 14/09/2026 
+se crea listados entre producto y categoria y se sigue trabajando en la misma estructura

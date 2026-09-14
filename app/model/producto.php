@@ -31,10 +31,8 @@ public function getAll()
                 p.id_proveedor,
                 pr.nombre AS proveedor
             FROM productos p
-            INNER JOIN categoria c
-                ON p.id_categoria = c.id_categoria
-            INNER JOIN proveedores pr
-                ON p.id_proveedor = pr.id";
+            INNER JOIN categoria c ON p.id_categoria = c.id_categoria
+            INNER JOIN proveedores pr ON p.id_proveedor = pr.id";
 
     $consulta = $this->connection->query($sql);
 
@@ -43,24 +41,13 @@ public function getAll()
 
 public function getById($id)
 {
-    $sql = "SELECT
-                p.id,
-                p.nombre,
-                p.valor,
-                p.id_categoria,
-                c.nombre AS categoria,
-                c.descripcion AS descripcion_categoria,
-                p.id_proveedor,
-                pr.nombre AS proveedor
-            FROM productos p
-            INNER JOIN categoria c
-                ON p.id_categoria = c.id_categoria
-            INNER JOIN proveedores pr
-                ON p.id_proveedor = pr.id
-            WHERE p.id = $id";
+    $sql = "SELECT * FROM productos WHERE id = :id";
+    
+    $productoConsultado = $this->connection->prepare($sql);
+    $productoConsultado->bindParam(":id", $id, PDO::PARAM_INT);
+    $productoConsultado->execute();
 
-    $consulta = $this->connection->query($sql);
+    return $productoConsultado->fetch(PDO::FETCH_ASSOC);
 
-    return $consulta->fetch(PDO::FETCH_ASSOC);
 }
 }

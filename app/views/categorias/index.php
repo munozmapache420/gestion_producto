@@ -1,11 +1,11 @@
-<h1>Categorías</h1>
+<h1 style="color: cyan;">CATEGORIAS</h1>
 
 <table border="2">
 
     <tr>
-        <th>ID Categoría</th>
-        <th>Nombre</th>
-        <th>Descripción</th>
+        <th style="color:red;">ID Categoría</th>
+        <th style="color:red;">Nombre</th>
+        <th style="color:red;">Descripción</th>
     </tr>
 
     <?php foreach ($categorias as $categoria): ?>
@@ -21,14 +21,14 @@
 </table>
 
 
-<h1>Consulta de Categoría</h1>
+<h1 style="color: cyan;">CONSULTA DE CATEGORIA</h1>
 
 <table border="2">
 
     <tr>
-        <th>ID Categoría</th>
-        <th>Nombre</th>
-        <th>Descripción</th>
+        <th style="color:red;">ID Categoría</th>
+        <th style="color:red;">Nombre</th>
+        <th style="color:red;">Descripción</th>
     </tr>
 
     <tr>
